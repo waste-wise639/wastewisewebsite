@@ -1,5 +1,5 @@
 import { useState, type FC, type MouseEvent } from "react";
-import "./Navbar.css";
+import "./navbar.css";
 import { useTheme } from "../../../contexts/useTheme";
 import wastewise from "../../../assets/images/wastewise.png";
 import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
