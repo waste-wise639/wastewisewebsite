@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+:root {
+  font-family: 'Rethink Sans', sans-serif;
+  line-height: 1.5;
+  color-scheme: dark;
+}
+
+body {
+  --bg-primary: #191919;
+  --bg-secondary: #1f1f1f;
+  --text-primary: #f0f0f0;
+  --text-secondary: #aaaaaa;
+  --accent-color: #5FFF4D;
+  --accent-color-faded: #5FFF4D21;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --hero-bg: #02391E;
+  --features-bg: #222;
+  --main-bg: #000;
+  --text-gray: '#303030';
+  --text-primary-border: '#ffffff45';
+  --text-primary-reversed: #f0f0f0;
+
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light-theme {
+  --bg-primary: #f4f4f4;
+  --bg-secondary: #f0f0f0;
+  --text-primary: #121212;
+  --text-secondary: #555555;
+  --accent-color: #0BAE0B;
+  --accent-color-faded: #0BAE0B21;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hero-bg: #02391E;
+  --features-bg: #f4f4f4;
+  --main-bg: #fff;
+  --text-gray: '#303030';
+  --text-primary-border: '#303030';
+  --text-primary-reversed: #f0f0f0;
+
+  color-scheme: light;
+}
+
+button,
+input,
+textarea {
+  font-family: var(--font-family);
+}

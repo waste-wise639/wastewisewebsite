@@ -1,0 +1,218 @@
+/* WasteWisePricing.css */
+
+.pricing-section {
+    padding: 80px 0px;
+    background-color: var(--bg-primary);
+    /* Light background similar to your mission section */
+    text-align: center;
+}
+
+/* --- Header Styling --- */
+.pricing-header {
+    margin-bottom: 50px;
+}
+
+.pricing-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.pricing-header span {
+
+    color: var(--accent-color);
+
+}
+
+
+.pricing-header p {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-weight: 400;
+}
+
+/* --- Pricing Cards Container --- */
+.pricing-cards-container {
+    display: flex;
+    justify-content: center;
+    /* Center the cards horizontally */
+    gap: 30px;
+    /* Space between the two cards */
+    max-width: 900px;
+    /* Max width for the card group */
+    margin: 0 auto;
+    flex-wrap: wrap;
+    /* Allow cards to wrap on smaller screens */
+}
+
+/* --- Individual Pricing Card --- */
+.pricing-card {
+    background-color: var(--main-bg);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    flex: 1;
+    /* Allows cards to grow and shrink */
+    width: 100%;
+    /* Minimum width before wrapping */
+    max-width: 400px;
+    /* Max width for a single card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 25px;
+}
+
+/* --- Price Display --- */
+.card-price {
+    font-size: 2.5rem;
+    /* Larger font for the price */
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+    display: flex;
+    /* For aligning currency/frequency */
+    align-items: baseline;
+    gap: 5px;
+
+}
+
+.card-price .currency {
+    font-size: 1.8rem;
+    /* Slightly smaller currency symbol */
+    font-weight: 600;
+}
+
+.card-price .frequency {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    /* Muted gray for frequency */
+    font-weight: 400;
+}
+
+.card-price .early-bird {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    /* Dark green for "Early Bird" */
+}
+
+
+/* --- Features List --- */
+.card-features-list {
+    list-style: none;
+    /* Remove default list bullet points */
+    padding: 0;
+    margin: 0 0 30px 0;
+    /* Space below the list */
+    width: 100%;
+    /* Ensure list takes full width for left-alignment */
+    text-align: left;
+    /* Align list items to the left */
+}
+
+.card-features-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: var(--text-gray);
+}
+
+.card-features-list li:last-child {
+    margin-bottom: 0;
+}
+
+.check-icon {
+    color: var(--accent-color);
+    /* Bright green for the checkmark icon */
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    /* Prevent icon from shrinking */
+}
+
+/* --- Call-to-Action Buttons --- */
+.pricing-button {
+    border: none;
+    border-radius: 50px;
+    padding: 14px 35px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+    /* Full width button */
+    max-width: 250px;
+    /* Limit button width */
+}
+
+.primary-button {
+    background-color: var(--accent-color);
+    /* Dark green primary button */
+    color: var(--main-bg);
+}
+
+
+.secondary-button {
+    background-color: var(--accent-color);
+    /* Bright green secondary button */
+    color: var(--main-bg);
+    /* Dark text for contrast */
+}
+
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  
+
+    .pricing-header h1 {
+        font-size: 2rem;
+    }
+
+    .pricing-header p {
+        font-size: 1rem;
+    }
+
+    .pricing-cards-container {
+        flex-direction: column;
+        /* Stack cards vertically on smaller screens */
+        align-items: center;
+        gap: 40px;
+    }
+
+    .pricing-card {
+        max-width: 90%;
+        /* Allow cards to take more width on small screens */
+        padding: 30px;
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .card-price {
+        font-size: 2.2rem;
+    }
+
+    .pricing-button {
+        max-width: 80%;
+        /* Adjust button width */
+        padding: 12px 25px;
+    }
+}

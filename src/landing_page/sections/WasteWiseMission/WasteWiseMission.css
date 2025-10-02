@@ -1,0 +1,65 @@
+/* WasteWiseMission.css */
+
+.mission-section {
+    padding: 160px 16px;
+    background-color: var(--main-bg);
+    /* Light background to separate from other sections */
+    text-align: center;
+
+    /* Ensures the content div is centered on the page */
+}
+
+.mission-content {
+    /* Set a max width for readability and center the content block */
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Headline Style --- */
+.mission-headline {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    /* Dark green brand color */
+    margin-bottom: 25px;
+    position: relative;
+    margin-top:0px
+}
+
+/* --- Text Style --- */
+.mission-text {
+    font-size: 1.25rem;
+    /* Larger font size for prominence */
+    line-height: 1.6;
+    color: var(--text-primary);
+    /* Dark gray for high readability */
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* --- Optional Divider Style --- */
+.mission-divider {
+    width: 60px;
+    height: 4px;
+    background-color: #5FFF4D;
+    /* Bright accent green */
+    border-radius: 2px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .mission-section {
+        padding: 50px 15px;
+    }
+
+    .mission-headline {
+        font-size: 2rem;
+    }
+
+    .mission-text {
+        font-size: 1.1rem;
+    }
+}

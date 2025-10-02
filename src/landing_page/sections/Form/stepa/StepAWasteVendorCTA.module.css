@@ -1,0 +1,392 @@
+/* src/sections/StepAWasteVendorCTA_section/StepAWasteVendorCTA.module.css */
+
+/* --- Layout and Overall Container --- */
+
+.wasteVendorContainer {
+  display: flex;
+  min-height: 100vh;
+  /* Use colors from the global variables */
+  background-color: var(--main-bg);
+  color: var(--text-primary);
+}
+
+/* --- Left Panel (Waitlist Info) --- */
+.error {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 480px;
+  font-size: 12px;
+  width: fit-content
+}
+
+.leftPanel {
+  flex: 1;
+  /* Takes half of the width on desktop */
+  /* Specific dark green background from the color scheme */
+  background-color: var(--hero-bg);
+  /* #02391E */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.leftPanelContent {
+  max-width: 450px;
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+  /* Ensures text is bright */
+}
+
+.leftPanelTitle {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.leftPanelDescription {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #fff;
+  /* Use secondary text color for subtle contrast */
+  margin-bottom: 40px;
+}
+
+/* Illustration and Bubble Styling */
+.illustrationContainer {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.illustrationImage {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* Apply a slight filter or shadow if needed to match the image contrast */
+}
+
+/* Bubbles (Speech/Thought Text) */
+.bubbleRight,
+.bubbleBottom,
+.bubbleBottomLeft {
+  position: absolute;
+  /* White/Light background for bubbles as per the design */
+  background-color: var(--text-primary-reversed);
+  color: var(--bg-primary);
+  /* Dark text on light bubble */
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  /* Use the defined shadow color */
+  box-shadow: 0 4px 10px var(--shadow-color);
+  white-space: nowrap;
+}
+
+/* Positioning for bubbles (adjust to match image) */
+.bubbleRight {
+  top: 10%;
+  right: -20px;
+  transform: rotate(5deg);
+}
+
+.bubbleBottom {
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+}
+
+.bubbleBottomLeft {
+  bottom: 20%;
+  left: -30px;
+  transform: rotate(3deg);
+}
+
+
+/* --- Right Panel (Form) --- */
+
+.rightPanel {
+  flex: 1;
+  /* Use secondary background for contrast against the left panel */
+  background-color: var(--bg-secondary);
+  padding: 60px 80px;
+  overflow-y: auto;
+}
+
+.formHeader {
+  margin-bottom: 40px;
+}
+
+.formHeader h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.accentText {
+  /* Use the defined accent green */
+  color: var(--accent-color);
+}
+
+.formSubtitle {
+  font-size: 1.1em;
+  color: var(--text-secondary);
+}
+
+/* Form Grid Layout */
+.vendorForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Two columns for inputs */
+  gap: 30px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-right: 12px;
+}
+
+.inputGroup label {
+  font-size: 0.9em;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.inputGroup input,
+.inputGroup select {
+  width: 100%;
+  max-width: 100%;
+  /* ✅ Prevent overflow */
+  box-sizing: border-box;
+  /* ✅ Includes padding in width */
+}
+
+/* Make sure grid respects small screens */
+.vendorForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+  /* ✅ Full container width */
+  box-sizing: border-box;
+}
+
+
+
+/* Input and Select Styling */
+.inputGroup input,
+.inputGroup select {
+  width: 100%;
+  padding: 12px 15px;
+  /* Use a slightly transparent border based on text color */
+  border: 1px solid var(--text-gray);
+  border-radius: 8px;
+  /* Darker background for inputs within the secondary background */
+  background-color: var(--main-bg);
+  color: var(--text-gray);
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  font-family: 'Rethink Sans';
+}
+
+.inputGroup input::placeholder,
+.inputGroup select:focus option:disabled {
+  color: var(--text-secondary);
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-color) 30%, transparent);
+}
+
+/* Custom Select Arrow Styling */
+.inputGroup select {
+  /* Hide default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Custom arrow icon (light gray color for dark mode) */
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010H7Z%22%20fill%3D%22%23AAAAAA%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  padding-right: 40px;
+}
+
+/* Next Button Styling */
+.nextButton {
+  grid-column: span 2;
+  /* Span across both columns */
+  width: fit-content;
+  padding: 15px 40px;
+  /* Use accent color for background and dark color for text */
+  color: #5FFF4D;
+  background-color: #02391E;
+  border:none;
+  border-radius: 64px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-top: 20px;
+  justify-self: start;
+  font-family: 'Rethink Sans';
+  /* Align button to the left */
+}
+
+.nextButton:hover {
+  /* Slightly darker green on hover */
+  background-color: color-mix(in srgb, var(--accent-color) 85%, black);
+  transform: translateY(-1px);
+}
+
+
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  /* ✅ Blur background */
+  background: rgba(0, 0, 0, 0.4);
+  /* Slight dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal {
+  background: var(--main-bg);
+  padding: 32px 24px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+  animation: fadeInUp 0.3s ease-in-out;
+}
+
+.modal h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-gray);
+}
+
+.modal p {
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--text-gray);
+}
+
+.modalButton {
+  background: var(--hero-bg);
+  color: #5FFF4D;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 388px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  font-family: 'Rethink Sans';
+  font-weight: 900;
+}
+
+.success_image {
+  height: 86px;
+  width: 86px;
+
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 1024px) {
+  .rightPanel {
+    padding: 40px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wasteVendorContainer {
+    flex-direction: column;
+    /* Stack panels vertically */
+  }
+
+  .leftPanel {
+    min-height: 350px;
+    padding: 30px;
+    display: none;
+  }
+
+  .rightPanel {
+    padding: 30px;
+  }
+
+  .vendorForm {
+    grid-template-columns: 1fr;
+    /* Single column layout */
+  }
+
+  .nextButton {
+    grid-column: span 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .vendorForm {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    /* slightly smaller gap for mobile */
+  }
+
+  .inputGroup {
+    margin-right: 0;
+    /* ✅ Remove side margin on mobile */
+  }
+
+  .rightPanel {
+    padding: 20px;
+  }
+
+  .leftPanelTitle {
+    font-size: 2.2em;
+  }
+
+  .formHeader h1 {
+    font-size: 2em;
+  }
+
+  .leftPanel,
+  .rightPanel {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

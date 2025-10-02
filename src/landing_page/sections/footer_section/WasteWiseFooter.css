@@ -1,0 +1,257 @@
+/* WasteWiseFooter.css (Updated) */
+
+/* --- Main Container --- */
+.wastewise-footer-container {
+    background-color: #02391E;
+    border-radius: 20px;
+    padding: 40px 60px 20px;
+    max-width: 1400px;
+    position: relative;
+    overflow: hidden;
+    margin: 40px auto;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+/* --- Main Content Grid (3 Columns) --- */
+.wastewise-footer-content {
+    /* CHANGED: Switched to Grid for easier 3-column management */
+    display: grid;
+    /* Define 3 columns: Brand/Links (1fr), Contact (1.2fr), CTA (1.5fr) */
+    grid-template-columns: 1fr 1.2fr 1.5fr; 
+    gap: 40px; 
+    margin-bottom: 40px;
+    padding-bottom: 20px; /* Add slight padding at the bottom of the content section */
+}
+
+/* Base style for the main column groups */
+.wastewise-footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #5FFF4D; /* Highlight the headings with the accent color */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* --- Brand Section --- */
+.wastewise-footer-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+/* --- Links Section --- */
+.wastewise-footer-links-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Space between individual links */
+}
+
+.wastewise-footer-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease-in-out;
+    text-align: left;
+    cursor: pointer;
+}
+
+.wastewise-footer-link:hover {
+    color: #5FFF4D; /* Accent color on hover */
+}
+
+/* --- Contact Section Styles --- */
+.wastewise-footer-contact {
+    gap: 20px; /* Space between the different contact items */
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.contact-icon {
+    color: #5FFF4D; /* Accent green color */
+    font-size: 1.25rem;
+    flex-shrink: 0; 
+    margin-top: 3px; 
+}
+
+.contact-label {
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0px;
+    font-size: 0.95rem;
+}
+
+.contact-detail {
+    display: block; 
+    color: #ccc; 
+    font-size: 0.9rem;
+    text-decoration: none;
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+
+.contact-detail:hover {
+    color: #5FFF4D;
+}
+
+
+/* --- CTA Card Section --- */
+.wastewise-footer-cta-card {
+    background-color: #5FFF4D;
+    color: #02391E;
+    border-radius: 15px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.wastewise-footer-cta-headline {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.wastewise-footer-cta-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.wastewise-footer-cta-button {
+    background-color: #02391E;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Rethink Sans';
+}
+
+.wastewise-footer-cta-button:hover {
+    background-color: #1a4d35; /* Slightly darker green */
+}
+
+
+/* --- Bottom Section (Social & Copyright) --- */
+.wastewise-footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15); 
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.wastewise-footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.wastewise-footer-social-icon {
+    font-size: 1.5rem;
+    color: #5FFF4D; /* Default social icon color */
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, color 0.2s;
+}
+
+.wastewise-footer-social-icon:hover {
+    transform: translateY(-3px);
+    color: #fff;
+}
+
+.wastewise-footer-copyright {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* --- Decorative Icon --- */
+.wastewise-footer-decorative-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 80px;
+    opacity: 0.1;
+    color: #fff;
+    pointer-events: none;
+    transform: rotate(-25deg);
+    z-index: 0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .wastewise-footer-container {
+        padding: 40px 40px 20px;
+    }
+
+    .wastewise-footer-content {
+        /* On medium screens, switch to 2 columns: Left | CTA (full width) */
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .wastewise-footer-column:first-child { /* Brand/Links */
+        /* Takes up the left half */
+        grid-column: 1 / 2;
+    }
+
+    .wastewise-footer-contact { /* Contact Info */
+        /* Takes up the right half */
+        grid-column: 2 / 3;
+    }
+    
+    .wastewise-footer-cta-card {
+        /* CTA card spans both columns */
+        grid-column: 1 / -1; 
+        max-width: 100%;
+    }
+    
+    .wastewise-footer-column {
+        /* Ensure columns content remains left-aligned */
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .wastewise-footer-container {
+        padding: 30px 20px 15px;
+        border-radius: 15px;
+        margin: 20px 16px;
+    }
+
+    .wastewise-footer-content {
+        /* On small screens, stack everything vertically */
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Ensure all columns stack on top of each other */
+    .wastewise-footer-column:first-child, 
+    .wastewise-footer-contact, 
+    .wastewise-footer-cta-card {
+        grid-column: 1 / -1; 
+    }
+    
+    .wastewise-footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 15px;
+    }
+}

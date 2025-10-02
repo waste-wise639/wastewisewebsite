@@ -1,0 +1,120 @@
+/* --- Relevant CSS Changes --- */
+
+/* The wrapper remains the same to create the green circle */
+.card-icon-wrapper {
+
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: var(--accent-color-faded)
+  }
+  
+  /* New style for the emoji */
+  .card-emoji-icon {
+    font-size: 45px; /* Adjust size to make the emoji visible and centered */
+    line-height: 1; /* Helps with vertical alignment */
+  }
+  
+  /* Remove or comment out the old .card-icon styles: */
+  /*
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  */
+  
+  /* --- Rest of the CSS remains the same --- */
+  
+  .how-it-works-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 0px;
+
+    flex-wrap: wrap;
+  }
+  
+  .how-it-works-card {
+    background-color: var(--main-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    text-align: center;
+    max-width: 390px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .how-it-works-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-step-number {
+    background-color: var(--accent-color);
+    color: var(--main-bg);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 20px;
+
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: -12px;
+  }
+  
+  .card-description {
+    font-size: 1rem;
+    color: var(--text-gray);
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 960px) {
+    .how-it-works-section {
+      flex-direction: column;
+      align-items: center;
+    }
+    .how-it-works-card {
+      width: 80%;
+      max-width: 400px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .how-it-works-card {
+      width: 90%;
+      padding: 25px;
+    }
+    .card-icon-wrapper {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
+    .card-emoji-icon {
+      font-size: 40px; /* Smaller emoji on mobile */
+    }
+    .card-title {
+      font-size: 1.2rem;
+    }
+    .card-description {
+      font-size: 0.95rem;
+    }
+  }

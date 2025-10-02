@@ -1,0 +1,129 @@
+.wastvenrocta-container {
+  /* Dimensions and Layout */
+  width: calc(100% - 32px);
+  /* ✅ ensures no overflow with side margins */
+
+  margin: 40px auto;
+  /* ✅ fixed side margins */
+  padding: 120px 20px;
+  max-width: 1400px;
+  box-sizing: border-box;
+  /* ✅ padding inside width */
+
+  /* Prevent horizontal overflow */
+  overflow-x: hidden;
+
+  /* Appearance */
+  background-color: #02391E;
+  border-radius: 20px;
+
+  /* Positioning for the decorative icons */
+  position: relative;
+  text-align: center;
+}
+
+/* --- Decorative Icons --- */
+.wastvenrocta-icon-top-left,
+.wastvenrocta-icon-top-right,
+.wastvenrocta-icon-bottom-left,
+.wastvenrocta-icon-bottom-right {
+  position: absolute;
+  font-size: 60px;
+  opacity: 0.1;
+  color: var(--text-primary-reversed);
+  pointer-events: none;
+}
+
+.wastvenrocta-icon-top-left {
+  top: 10px;
+  left: 10px;
+  transform: rotate(-15deg);
+}
+
+.wastvenrocta-icon-top-right {
+  top: 10px;
+  right: 10px;
+  transform: rotate(15deg);
+}
+
+.wastvenrocta-icon-bottom-left {
+  bottom: 10px;
+  left: 10px;
+  transform: rotate(15deg);
+}
+
+.wastvenrocta-icon-bottom-right {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(-15deg);
+}
+
+/* --- Content Styling --- */
+.wastvenrocta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.wastvenrocta-headline {
+  color: var(--text-primary-reversed);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.wastvenrocta-highlight {
+  color: #5FFF4D;
+}
+
+.wastvenrocta-description {
+  color: var(--text-primary-reversed);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Button Styling --- */
+.wastvenrocta-button {
+  background-color: transparent;
+  color: #5FFF4D;
+  border: 1px solid #5FFF4D;
+  border-radius: 50px;
+
+  padding: 16px 48px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Rethink Sans';
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+  .wastvenrocta-container {
+    width: calc(100% - 32px);
+    /* ✅ keeps margin consistent */
+    max-width: 100%;
+    margin: 40px 16px;
+    padding: 30px 20px;
+  }
+
+  .wastvenrocta-headline {
+    font-size: 1.8rem;
+  }
+
+  .wastvenrocta-description {
+    font-size: 1rem;
+  }
+
+  .wastvenrocta-icon-top-left,
+  .wastvenrocta-icon-top-right,
+  .wastvenrocta-icon-bottom-left,
+  .wastvenrocta-icon-bottom-right {
+    font-size: 40px;
+  }
+}

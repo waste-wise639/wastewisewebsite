@@ -1,0 +1,180 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.wastewise-contact-section {
+  padding: 60px 16px;
+  background-color: var(--bg-primary);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.wastewise-contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.wastewise-contact-header h1 {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.wastewise-contact-header p {
+  font-size: 1.1rem;
+  color: var(--text-gray);
+}
+
+.wastewise-contact-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.wastewise-contact-info-block {
+  flex: 1 1 300px;
+  background-color: var(--hero-bg);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.wastewise-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.wastewise-contact-icon {
+  font-size: 1.2rem;
+  color: #fff;
+  flex-shrink: 0;
+  margin-top: 32px;
+}
+
+.wastewise-contact-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.wastewise-contact-detail,
+.wastewise-contact-address {
+  display: block;
+  font-size: 0.95rem;
+  color: #ffffff85;
+  text-decoration: none;
+  line-height: 1.4;
+  font-style: normal;
+  transition: color 0.2s;
+}
+
+.wastewise-contact-form-block {
+  flex: 1.5 1 400px;
+  background-color: var(--main-bg);
+  padding: 40px;
+}
+
+.wastewise-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wastewise-contact-label-form {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin: 12px 0 -12px;
+}
+
+.wastewise-contact-input,
+.wastewise-contact-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--text-primary);
+  border: 1px solid #66666666;
+  background-color: #66666612;
+  margin-top: 3px;
+}
+
+.wastewise-contact-input:focus,
+.wastewise-contact-textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.wastewise-contact-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.wastewise-submit-button {
+  background-color: var(--accent-color);
+  color: var(--main-bg);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  margin-top: 15px;
+  align-self: flex-start;
+}
+
+.wastewise-submit-button:hover {
+  background-color: #388e3c;
+}
+
+.wastewise-submit-button:active {
+  transform: scale(0.99);
+}
+
+@media (max-width: 900px) {
+  .wastewise-contact-content-container {
+    flex-direction: column;
+    box-shadow: none;
+  }
+
+  .wastewise-contact-info-block,
+  .wastewise-contact-form-block {
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+  }
+
+  .wastewise-submit-button {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 600px) {
+  .wastewise-contact-section {
+    padding: 40px 15px;
+  }
+
+  .wastewise-contact-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .wastewise-contact-info-block,
+  .wastewise-contact-form-block {
+    padding: 25px;
+  }
+}

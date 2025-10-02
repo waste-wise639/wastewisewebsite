@@ -1,0 +1,134 @@
+/* Persona Section Styles */
+
+.persona-container {
+    padding: 6rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.persona-title-group {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.persona-title-group h2 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.persona-title-group h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+.persona-title-group h1 span {
+    color: var(--accent-color)
+}
+
+.persona-card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Tablet and Desktop Grid Layout */
+@media (min-width: 768px) {
+    .persona-card-grid {
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+
+.persona-card {
+    flex: 1;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Specific Card Styling (Matching Screenshot) */
+.disposer-card {
+    background-color: var(--accent-color);
+    /* Very light green background for contrast */
+    color: #052e16;
+    /* Dark text for contrast on light green */
+}
+
+
+.persona-card.vendor-card {
+
+    border: 1px solid #666;
+    /* subtle gray border */
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+.persona-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 2rem;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+.bullet-points {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.bullet-point {
+    padding: 0.75rem 1rem;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    width: fit-content;
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #121212;
+}
+
+.disposer-card {
+    background-color: #5FFF4D
+}
+
+/* Vendor Specific Styles */
+.vendor-cta {
+    margin-top: auto;
+}
+
+.vendor-cta button {
+    background-color: #5FFF4D;
+    /* Strong green CTA */
+    color: #121212;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: 'Rethink Sans';
+}
+
+.vendor-cta button:hover {
+    background-color: #5FFF4D;
+}

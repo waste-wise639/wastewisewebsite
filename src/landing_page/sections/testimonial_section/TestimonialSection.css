@@ -1,0 +1,102 @@
+/* Testimonial Section Styles */
+
+.testimonials-grid-container {
+    padding: 6rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Title and Grid Layout for Desktop */
+@media (min-width: 1024px) {
+    .testimonials-grid-container {
+        flex-direction: row;
+        gap: 5%;
+        align-items: flex-start;
+    }
+}
+
+/* Left Side: Title Group */
+.testimonials-title-group {
+    flex: 0 0 30%;
+    /* Fixed width on desktop */
+    padding-top: 1rem;
+    text-align: left;
+}
+
+.testimonials-title-group h2 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.testimonials-title-group h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--text-color);
+}
+
+.testimonials-title-group h1 span {
+    color: var(--accent-color)
+}
+
+/* Right Side: Testimonial Cards */
+.testimonials-card-area {
+    flex: 1;
+    /* Takes up remaining space on desktop */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+    align-items: stretch;
+}
+
+/* Tablet Layout */
+@media (min-width: 640px) {
+    .testimonials-card-area {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+/* Desktop Layout */
+@media (min-width: 1024px) {
+    .testimonials-card-area {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+.testimonial-card {
+    background-color: var(--main-bg);
+    border-radius: 12px;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    height: 100%;
+
+
+}
+
+.testimonial-quote {
+    font-size: 1.05rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color-secondary);
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+    margin-top: auto;
+}

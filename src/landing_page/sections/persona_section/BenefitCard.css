@@ -1,0 +1,112 @@
+/* BenefitCard.css */
+
+.benefit-card {
+    background-color: var(--main-bg);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    /* Adjust padding as needed */
+    flex: 1;
+    /* Allows cards to grow and shrink in their container */
+    min-width: 300px;
+    max-width: 450px;
+    /* Max width for a single card */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    /* Text aligns to the left within the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    /* Dark green for the title */
+    margin-bottom: 30px;
+    /* Space below the title */
+    text-align: center;
+    /* Center the title */
+}
+
+/* --- List of Benefit Items --- */
+.benefit-items-list {
+    list-style: none;
+    /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    /* Align icon and text to the top */
+    gap: 15px;
+    /* Space between icon and text content */
+    margin-bottom: 25px;
+    /* Space between benefit items */
+}
+
+.benefit-item:last-child {
+    margin-bottom: 0;
+}
+
+.benefit-check-icon {
+    color: var(--accent-color);
+    /* Bright green for the checkmark */
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    /* Prevent icon from shrinking */
+    margin-top: 2px;
+    /* Slight vertical adjustment */
+}
+
+.benefit-text-content {
+    flex-grow: 1;
+    /* Allow text content to take remaining space */
+}
+
+.benefit-headline {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    /* Darker gray for the headline */
+    margin-top: 0;
+    margin-bottom: 5px;
+    /* Space between headline and description */
+}
+
+.benefit-description {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    /* Muted gray for the description */
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Optional Button Styling (if you enable it in the TSX) */
+/*
+.benefit-card-button {
+    background-color: #38a169;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.benefit-card-button:hover {
+    background-color: #2f855a;
+}
+*/
