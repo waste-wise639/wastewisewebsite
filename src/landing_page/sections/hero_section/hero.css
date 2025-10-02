@@ -1,4 +1,3 @@
-
 .hero-container {
     display: flex;
     flex-direction: column;
@@ -61,6 +60,13 @@
     margin-bottom: 2rem;
 }
 
+/* --- NEW STYLES: Action Buttons Group --- */
+.action-buttons-group {
+    display: flex;
+    flex-direction: column; /* Stack vertically by default */
+    gap: 1.5rem;
+}
+
 .waitlist-button-hero {
     background-color: white;
     color: #054f2c;
@@ -72,13 +78,63 @@
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
     font-family: 'Rethink Sans';
+    align-self: flex-start; /* Align left */
+    width: auto;
 }
 
-.waitlist-button:hover {
-    background-color: var(--accent-color);
+.waitlist-button-hero:hover {
+    background-color: var(--accent-color); /* Assuming var(--accent-color) is defined */
     color: white;
 }
 
+/* Download Buttons Container */
+.app-download-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: 'Rethink Sans';
+    max-width: 250px; /* Constrain button width on mobile */
+}
+
+.download-button i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* iOS Button Styling */
+.ios-button {
+    background-color: var(--accent-color);
+    color: #121212;
+    border: 1px solid #000;
+}
+
+.ios-button:hover {
+    background-color: #333;
+}
+
+/* Android Button Styling */
+.android-button {
+    background-color: #4CAF50; /* Google Play green */
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.android-button:hover {
+    background-color: #388E3C;
+}
 
 
 /* Desktop Layout */
@@ -96,9 +152,22 @@
         margin-top: 32px;
     }
 
-
-
     .hero-heading {
         font-size: 3.5rem;
+    }
+
+    /* Desktop button arrangement */
+    .action-buttons-group {
+        flex-direction: column; /* Keep vertical stack */
+        align-items: flex-start; /* Align all actions to the left */
+    }
+    
+    .app-download-group {
+        flex-direction: row; /* Display download buttons side-by-side on desktop */
+        gap: 1rem;
+    }
+    
+    .download-button {
+        max-width: none; /* Remove width constraint on desktop */
     }
 }
