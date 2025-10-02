@@ -117,13 +117,10 @@
 /* iOS Button Styling */
 .ios-button {
     background-color: var(--accent-color);
-    color: #121212;
+    color: var(--main-bg);
     border: 1px solid #000;
 }
 
-.ios-button:hover {
-    background-color: #333;
-}
 
 /* Android Button Styling */
 .android-button {
@@ -132,9 +129,7 @@
     border: 1px solid #4CAF50;
 }
 
-.android-button:hover {
-    background-color: #388E3C;
-}
+
 
 
 /* Desktop Layout */
